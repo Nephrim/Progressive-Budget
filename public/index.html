@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#317EFB">
+  <link rel="shortcut icon" href="icons/icon-192x192.png" type="image/x-icon">
+  <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./styles.css">
+
+  <title>Budget Does It</title>
+</head>
+<header class="navbar">
+  <nav class="teal lighten">
+    <div class="nav">
+      <div class="total brand-logo center">💰Your total is: $<span id="total">0</span></div>
+    </div>
+  </nav>
+</header>
+<body>
+  <div class="container">
+  <div class="wrapper">
+    <div class="container">
+    <div class="form">
+      <input type="text" id="t-name" placeholder="Name of transaction" />
+      <input type="number" min="0" id="t-amount" placeholder="Transaction amount" />
+      <div class="button-box">
+      <button class="waves-light btn" id="add-btn"><i class="buttons p-2"></i>💵 Add Funds</button>
+      <button class="waves-light btn" id="sub-btn"><i class="buttons p-2"></i>💸 Subtract Funds</button>
+      <p class="error"></p>
+    </div>
+    </div>
+  </div>
+    <div class="transactions">
+      <table>
+        <thead>
+          <th>Transaction</th>
+          <th>Amount</th>
+        </thead>
+        <tbody id="tbody">
+          
+        </tbody>
+      </table>
+    </div>
+    
+    <canvas id="myChart"></canvas>
+  </div>
+</div>
+<div class="container">
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="index.js"></script>
+</body>
+</html>
